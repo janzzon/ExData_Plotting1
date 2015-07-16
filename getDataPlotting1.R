@@ -2,6 +2,7 @@
 
 library(dplyr)
 library(magrittr)
+library(RCurl)
 
 # location of the data
 datasetUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -12,7 +13,7 @@ if (!file.exists("./data")) dir.create("./data")
 # download zipped file if missing
 if(!file.exists("data/household_power_consumption.zip")) {
   download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", 
-                "data/household_power_consumption.zip")
+                "data/household_power_consumption.zip", method = "curl")
 }
 
 # unzip file
