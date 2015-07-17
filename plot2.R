@@ -7,7 +7,7 @@ source("getDataPlotting1.R", encoding = "UTF-8")
 
 # Temporary set locale to enlish to get correct x-axis. If you're running English os, this won't be any problem
 oldlocale <- Sys.getlocale("LC_TIME")
-Sys.setlocale("LC_TIME", "English")
+Sys.setlocale("LC_TIME", "C")
 
 # open png graphics device
 png(filename = "plot2.png")
